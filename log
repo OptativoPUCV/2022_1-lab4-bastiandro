@@ -744,3 +744,17 @@ hashmap.c:94:21: error: ‘HashMap {aka struct HashMap}’ has no member named �
                      ^~
 Compilation failed
 29f0984
+Sat Apr  9 22:16:49 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:89:29: error: array subscript is not an integer
+     if(is_equal(map->buckets[uno]->key,key)==1){
+                             ^
+hashmap.c:94:8: error: statement with no effect [-Werror=unused-value]
+     map->current;
+     ~~~^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+15de6a8

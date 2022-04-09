@@ -86,12 +86,12 @@ Pair * searchMap(HashMap * map,  char * key) {
   int aux=hash(key,100);
   Pair*uno=map->buckets[aux];
   while(uno != NULL){
-    if(is_equal(map->buckets[aux]->key,key)==1){
+    if(is_equal(map->buckets[uno]->key,key)==1){
       return uno->value;
       
     }
     uno = uno +1;
-    map->current=map->uno;
+    map->current;
   }
     return NULL;
 }
