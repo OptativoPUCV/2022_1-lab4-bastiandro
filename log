@@ -620,3 +620,19 @@ hashmap.c:91:19: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 6843ca5
+Sat Apr  9 21:51:55 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:86:20: error: ‘size’ undeclared (first use in this function); did you mean ‘sinl’?
+   int aux=hash(key,size);
+                    ^~~~
+                    sinl
+hashmap.c:86:20: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:91:19: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+       map->current=uno;
+                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+ab232cd
