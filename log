@@ -370,3 +370,28 @@ hashmap.c:92:9: error: assignment from incompatible pointer type [-Werror=incomp
 cc1: all warnings being treated as errors
 Compilation failed
 9d7232a
+Sat Apr  9 21:17:26 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from hashmap.c:6:0,
+                 from test.c:4:
+hashmap.h:18:6: error: unknown type name ‘pair’
+      pair* next;
+      ^~~~
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:86:21: error: passing argument 2 of ‘hash’ makes integer from pointer without a cast [-Werror=int-conversion]
+   int aux =hash(key,map);
+                     ^~~
+hashmap.c:26:6: note: expected ‘long int’ but argument is of type ‘HashMap * {aka struct HashMap *}’
+ long hash( char * key, long capacity) {
+      ^~~~
+hashmap.c:90:14: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+       return &(uno->value);
+              ^~~~~~~~~~~~~
+hashmap.c:92:9: error: assignment from incompatible pointer type [-Werror=incompatible-pointer-types]
+     uno = uno->next;
+         ^
+cc1: all warnings being treated as errors
+Compilation failed
+0304850
