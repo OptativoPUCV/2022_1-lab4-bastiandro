@@ -510,3 +510,16 @@ hashmap.c:26:6: note: declared here
       ^~~~
 Compilation failed
 dacc610
+Sat Apr  9 21:44:47 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:86:12: error: too few arguments to function ‘hash’
+   int aux =hash(key);
+            ^~~~
+hashmap.c:26:6: note: declared here
+ long hash( char * key, long capacity) {
+      ^~~~
+Compilation failed
+d7cc16e
