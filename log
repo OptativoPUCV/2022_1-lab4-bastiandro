@@ -887,3 +887,24 @@ hashmap.c:91:19: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 10a34c6
+Sat Apr  9 22:40:08 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:87:8: error: conflicting types for ‘uno’
+   Pair*uno=map->buckets[aux];
+        ^~~
+hashmap.c:86:8: note: previous definition of ‘uno’ was here
+   long uno=hash(key,map->capacity);
+        ^~~
+hashmap.c:87:25: error: ‘aux’ undeclared (first use in this function)
+   Pair*uno=map->buckets[aux];
+                         ^~~
+hashmap.c:87:25: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:91:19: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+       map->current=uno->value;
+                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+36a449a
