@@ -139,3 +139,29 @@ hashmap.c:86:7: error: variable ‘aux’ set but not used [-Werror=unused-but-s
 cc1: all warnings being treated as errors
 Compilation failed
 2ad137e
+Sat Apr  9 21:01:48 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:86:12: error: too few arguments to function ‘hash’
+   int aux =hash(key)%(map->capacity);
+            ^~~~
+hashmap.c:26:6: note: declared here
+ long hash( char * key, long capacity) {
+      ^~~~
+hashmap.c:87:15: error: ‘HashMap {aka struct HashMap}’ has no member named ‘map’
+   Pair*uno=map->map->buckets[aux];
+               ^~
+hashmap.c:90:14: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+       return &(uno->value);
+              ^~~~~~~~~~~~~
+hashmap.c:92:12: error: ‘Pair {aka struct Pair}’ has no member named ‘next’
+     uno=uno->next;
+            ^~
+hashmap.c:86:7: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+   int aux =hash(key)%(map->capacity);
+       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+bb14742
