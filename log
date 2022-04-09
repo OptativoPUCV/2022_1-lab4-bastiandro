@@ -964,3 +964,14 @@ hashmap.c:91:19: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 28abc7b
+Sat Apr  9 22:43:05 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:91:7: error: ‘current’ undeclared (first use in this function)
+       current=uno->value;
+       ^~~~~~~
+hashmap.c:91:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+515a47d
