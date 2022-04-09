@@ -804,3 +804,14 @@ hashmap.c:94:17: error: void value not ignored as it ought to be
 cc1: all warnings being treated as errors
 Compilation failed
 65708b0
+Sat Apr  9 22:18:30 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:17: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+     map->current=uno->value;
+                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+66f8f66
