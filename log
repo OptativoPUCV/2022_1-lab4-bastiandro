@@ -90,3 +90,18 @@ hashmap.c:70:14: error: ‘size’ undeclared (first use in this function); did 
 hashmap.c:70:14: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 87cd402
+Sat Apr  9 20:20:15 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:72:31: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+   Mapa->buckets=malloc(sizeof(pair*)*capacity);
+                               ^~~~
+                               Pair
+hashmap.c:72:31: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:72:36: error: expected expression before ‘)’ token
+   Mapa->buckets=malloc(sizeof(pair*)*capacity);
+                                    ^
+Compilation failed
+3bd134d
