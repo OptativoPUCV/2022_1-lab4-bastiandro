@@ -975,3 +975,17 @@ hashmap.c:91:7: error: ‘current’ undeclared (first use in this function)
 hashmap.c:91:7: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 515a47d
+Sat Apr  9 22:43:30 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:91:7: error: ‘current’ undeclared (first use in this function)
+       current[i]=uno->value;
+       ^~~~~~~
+hashmap.c:91:7: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:91:15: error: ‘i’ undeclared (first use in this function)
+       current[i]=uno->value;
+               ^
+Compilation failed
+60ac863
