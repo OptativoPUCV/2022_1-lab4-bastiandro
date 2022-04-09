@@ -989,3 +989,13 @@ hashmap.c:91:15: error: ‘i’ undeclared (first use in this function)
                ^
 Compilation failed
 60ac863
+Sat Apr  9 22:44:30 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:91:23: error: ‘HashMap {aka struct HashMap}’ has no member named ‘value’
+       map->current=map->value;
+                       ^~
+Compilation failed
+99036ce
