@@ -541,3 +541,14 @@ hashmap.c:86:7: error: unused variable ‘i’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 d07dcd1
+Sat Apr  9 21:46:26 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:87:21: error: ‘uno’ undeclared (first use in this function)
+   int aux =hash(key,uno);
+                     ^~~
+hashmap.c:87:21: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+dd529e2
