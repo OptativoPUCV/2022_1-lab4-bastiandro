@@ -636,3 +636,24 @@ hashmap.c:91:19: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 ab232cd
+Sat Apr  9 21:55:28 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:86:11: error: too few arguments to function ‘hash’
+   int aux=hash(key);
+           ^~~~
+hashmap.c:26:6: note: declared here
+ long hash( char * key, long capacity) {
+      ^~~~
+hashmap.c:89:8: error: implicit declaration of function ‘Is_equal’; did you mean ‘is_equal’? [-Werror=implicit-function-declaration]
+     if(Is_equal(map->buckets[aux]->key,key)!=1){
+        ^~~~~~~~
+        is_equal
+hashmap.c:91:19: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+       map->current=uno;
+                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+fb9e27d
