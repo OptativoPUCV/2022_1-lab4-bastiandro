@@ -89,7 +89,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     if(strcmp(uno->key,key)==0){
       return uno->value;
     }else{
-    uno = uno->next;}
+    uno = uno +1;}
   }
     return uno;
 }
