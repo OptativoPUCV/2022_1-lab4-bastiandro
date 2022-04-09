@@ -87,7 +87,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   Pair*uno=map->buckets[aux];
   while(uno != NULL){
     if(strcmp(uno->key,key)==0){
-      return &(uno->value);
+      return uno->value;
     }else{
     uno = uno->next;}
   }
