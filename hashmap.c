@@ -88,8 +88,8 @@ Pair * searchMap(HashMap * map,  char * key) {
   while(uno != NULL){
     if(strcmp(uno->key,key)==0){
       return &(uno->value);
-    }
-    uno = uno->next;
+    }else{
+    uno = uno->next;}
   }
     return uno;
 }
