@@ -52,3 +52,17 @@ hashmap.c:72:3: note: each undeclared identifier is reported only once for each 
 cc1: all warnings being treated as errors
 Compilation failed
 a8ce932
+Sat Apr  9 19:48:30 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:70:13: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+   Mapa->size=NULL;
+             ^
+hashmap.c:71:17: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+   Mapa->capacity=NULL;
+                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+0b6dadd
