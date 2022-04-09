@@ -790,3 +790,17 @@ hashmap.c:94:17: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 f2b24df
+Sat Apr  9 22:18:23 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:18: error: dereferencing ‘void *’ pointer [-Werror]
+     map->current=*uno->value;
+                  ^~~~~~~~~~~
+hashmap.c:94:17: error: void value not ignored as it ought to be
+     map->current=*uno->value;
+                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+65708b0
