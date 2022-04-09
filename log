@@ -165,3 +165,23 @@ hashmap.c:86:7: error: variable ‘aux’ set but not used [-Werror=unused-but-s
 cc1: all warnings being treated as errors
 Compilation failed
 bb14742
+Sat Apr  9 21:03:48 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:86:12: error: too few arguments to function ‘hash’
+   int aux =hash(key);
+            ^~~~
+hashmap.c:26:6: note: declared here
+ long hash( char * key, long capacity) {
+      ^~~~
+hashmap.c:90:14: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+       return &(uno->value);
+              ^~~~~~~~~~~~~
+hashmap.c:92:14: error: ‘Pair {aka struct Pair}’ has no member named ‘next’
+     uno = uno->next;
+              ^~
+cc1: all warnings being treated as errors
+Compilation failed
+a6a9f07
