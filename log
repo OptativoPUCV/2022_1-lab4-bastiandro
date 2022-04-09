@@ -758,3 +758,14 @@ hashmap.c:94:8: error: statement with no effect [-Werror=unused-value]
 cc1: all warnings being treated as errors
 Compilation failed
 15de6a8
+Sat Apr  9 22:16:59 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:8: error: statement with no effect [-Werror=unused-value]
+     map->current;
+     ~~~^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8a2b178
