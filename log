@@ -552,3 +552,24 @@ hashmap.c:87:21: error: ‘uno’ undeclared (first use in this function)
 hashmap.c:87:21: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 dd529e2
+Sat Apr  9 21:46:41 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:86:25: error: ‘aux’ undeclared (first use in this function)
+   Pair*uno=map->buckets[aux];
+                         ^~~
+hashmap.c:86:25: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:87:21: error: passing argument 2 of ‘hash’ makes integer from pointer without a cast [-Werror=int-conversion]
+   int aux =hash(key,uno);
+                     ^~~
+hashmap.c:26:6: note: expected ‘long int’ but argument is of type ‘Pair * {aka struct Pair *}’
+ long hash( char * key, long capacity) {
+      ^~~~
+hashmap.c:87:7: error: unused variable ‘aux’ [-Werror=unused-variable]
+   int aux =hash(key,uno);
+       ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+da70af4
