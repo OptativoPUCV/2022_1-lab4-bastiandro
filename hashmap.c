@@ -90,10 +90,11 @@ Pair * searchMap(HashMap * map,  char * key) {
       return uno->value;
       
     }
-    map->current=uno;
+   
     uno = uno +1;
     
   }
+    map->current=uno;
     return NULL;
 }
 
