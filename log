@@ -1022,3 +1022,26 @@ hashmap.c:91:19: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 9cf27a2
+Sat Apr  9 22:45:56 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:87:8: error: conflicting types for ‘uno’
+   Pair*uno=map->buckets;
+        ^~~
+hashmap.c:86:8: note: previous definition of ‘uno’ was here
+   long uno=hash(key,map->capacity);
+        ^~~
+hashmap.c:87:12: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+   Pair*uno=map->buckets;
+            ^~~
+hashmap.c:89:29: error: array subscript is not an integer
+     if(is_equal(map->buckets[uno]->key,key)==1){
+                             ^
+hashmap.c:91:19: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+       map->current=uno->value;
+                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+a8f0929
