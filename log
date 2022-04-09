@@ -10,3 +10,14 @@ Sat Apr  9 19:38:42 UTC 2022:
  tests:  4|5
 total_score: 20/70
 ec8867c
+Sat Apr  9 19:41:10 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:71:3: error: statement with no effect [-Werror=unused-value]
+   for(i;i<capacity;i++){
+   ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+d56557b
