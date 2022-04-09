@@ -594,3 +594,14 @@ hashmap.c:87:7: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 2509cea
+Sat Apr  9 21:48:14 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:86:20: error: ‘uno’ undeclared (first use in this function)
+   int aux=hash(key,uno);
+                    ^~~
+hashmap.c:86:20: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+23456e4

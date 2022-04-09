@@ -83,8 +83,8 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) { 
+  int aux=hash(key,uno);
   Pair*uno=map->buckets[aux];
-  int aux =hash(key,uno);
   while(uno != NULL){
     if(strcmp(uno->key,key)==0){
       return uno->value;
