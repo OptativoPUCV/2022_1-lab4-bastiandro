@@ -1100,3 +1100,19 @@ hashmap.c:97:17: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 bf16693
+Sat Apr  9 23:14:19 UTC 2022: 
+ hashmap.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:17: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+     map->current=uno;
+                 ^
+hashmap.c: In function ‘firstMap’:
+hashmap.c:101:18: error: ‘HashMap {aka struct HashMap}’ has no member named ‘capcacity’; did you mean ‘capacity’?
+     i=(i+1)%map->capcacity;
+                  ^~~~~~~~~
+                  capacity
+cc1: all warnings being treated as errors
+Compilation failed
+58585a3

@@ -87,20 +87,21 @@ Pair * searchMap(HashMap * map,  char * key) {
   Pair*uno=map->buckets[aux];
   while(uno != NULL){
     if(is_equal(map->buckets[aux]->key,key)==1){
-      return uno->value;
-      
+      return uno->value; 
     }
-   
     uno = uno +1;
-    
   }
     map->current=uno;
     return NULL;
 }
 
 Pair * firstMap(HashMap * map) {
-
-    return NULL;
+  int i=0;
+  while(map->buckets[i]==NULL){
+    i=(i+1)%map->capcacity;
+  }
+  map->current=i;
+  return map->buckets[i];
 }
 
 Pair * nextMap(HashMap * map) {
