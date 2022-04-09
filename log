@@ -674,3 +674,20 @@ hashmap.c:91:19: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 2adf530
+Sat Apr  9 21:56:24 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:86:11: error: too few arguments to function ‘hash’
+   int aux=hash(key);
+           ^~~~
+hashmap.c:26:6: note: declared here
+ long hash( char * key, long capacity) {
+      ^~~~
+hashmap.c:91:19: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+       map->current=uno;
+                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+307755d
