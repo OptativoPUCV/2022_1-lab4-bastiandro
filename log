@@ -1127,3 +1127,15 @@ hashmap.c:94:17: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 ea7e8d4
+Sat Apr  9 23:53:59 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:18: error: ‘pair’ undeclared (first use in this function); did you mean ‘Pair’?
+     map->current=pair->uno;
+                  ^~~~
+                  Pair
+hashmap.c:94:18: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+819ddb3
