@@ -91,10 +91,10 @@ Pair * searchMap(HashMap * map,  char * key) {
       aux= (aux +1) % map->capacity;
       if(i==NULL)return NULL;
     }
-    return i->value;
+    
     map->current=aux;
     
-    return NULL;
+    return i->value;
   }
 
 Pair * firstMap(HashMap * map) {
