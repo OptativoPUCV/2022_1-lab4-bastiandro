@@ -1582,3 +1582,14 @@ hashmap.c:92:19: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 0982a21
+Sun Apr 10 19:50:07 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:92:19: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+       map->current=i;
+                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+2face15
