@@ -1742,3 +1742,14 @@ Sun Apr 10 21:11:11 UTC 2022:
  tests:  6|4
 total_score: 30/70
 c82f688
+Sun Apr 10 21:18:03 UTC 2022: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:17: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+     map->current=i;
+                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+e73c9e2
