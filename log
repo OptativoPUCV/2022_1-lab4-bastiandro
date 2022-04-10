@@ -1640,3 +1640,29 @@ hashmap.c:91:19: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 37841f7
+Sun Apr 10 20:04:00 UTC 2022: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:88:11: error: comparison between pointer and integer [-Werror]
+   while(i != NULL || (is_equal(map->buckets[i]->key,key)==1) ){
+           ^~
+hashmap.c:89:17: error: invalid type argument of ‘->’ (have ‘long int’)
+       return  (i->value);
+                 ^~
+hashmap.c:93:8: error: comparison between pointer and integer [-Werror]
+   if (i== NULL || i->key==NULL){
+        ^~
+hashmap.c:93:20: error: invalid type argument of ‘->’ (have ‘long int’)
+   if (i== NULL || i->key==NULL){
+                    ^~
+hashmap.c:98:12: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+     return i;
+            ^
+hashmap.c:86:8: error: unused variable ‘aux’ [-Werror=unused-variable]
+   Pair*aux=map->buckets[i];
+        ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+e0d86dd
