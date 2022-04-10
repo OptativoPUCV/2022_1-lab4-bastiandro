@@ -91,7 +91,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     return NULL;
     }
     aux= aux +1;
-    map->current=i;
+    map->current=aux;
     
     return NULL;
   }
