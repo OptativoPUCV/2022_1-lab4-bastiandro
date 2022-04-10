@@ -90,10 +90,9 @@ Pair * searchMap(HashMap * map,  char * key) {
   }
   while(uno != NULL || (is_equal(map->buckets[aux]->key,key)==1) ){
       return uno->value; 
-      map->current=uno;
     }
     uno = uno +1;
-  
+    map->current=uno;
     
     return uno;
   }
