@@ -1290,3 +1290,13 @@ hashmap.c:94:19: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 78fb7e9
+Sun Apr 10 19:10:30 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:19: error: incompatible types when assigning to type ‘long int’ from type ‘Pair {aka struct Pair}’
+       map->current=*uno;
+                   ^
+Compilation failed
+bb41585
