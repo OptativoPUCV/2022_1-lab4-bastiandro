@@ -89,7 +89,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   }
   while(i != NULL || (is_equal(map->buckets[aux]->key,key)==1) ){
       return  (i->value); 
-      map->current=i
+      map->current=i;
     }
     i = i +1;
     
