@@ -1527,3 +1527,17 @@ hashmap.c:92:19: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 f7808d3
+Sun Apr 10 19:44:29 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:90:21: error: array subscript is not an integer
+   while(map->buckets[i] != NULL || (is_equal(map->buckets[aux]->key,key)==1) ){
+                     ^
+hashmap.c:92:19: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+       map->current=i;
+                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+8a730e0
