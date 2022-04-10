@@ -1937,3 +1937,12 @@ hashmap.c:100:3: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 09fde80
+Sun Apr 10 22:08:26 UTC 2022: 
+ hashmap.c | 17 ++++++++---------
+ 1 file changed, 8 insertions(+), 9 deletions(-)
+In file included from test.c:4:0:
+hashmap.c:99:3: error: expected identifier or ‘(’ before ‘}’ token
+   }
+   ^
+Compilation failed
+1c9d6b0
