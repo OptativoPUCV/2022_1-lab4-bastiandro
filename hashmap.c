@@ -90,7 +90,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   if (i== NULL || i->key==NULL){
     return NULL;
     }
-    i = i +1;
+    aux= aux +1;
     map->current=i;
     
     return NULL;
