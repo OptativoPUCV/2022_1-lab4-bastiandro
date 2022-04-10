@@ -1821,3 +1821,9 @@ hashmap.c:90:24: error: invalid type argument of ‘->’ (have ‘long int’)
 cc1: all warnings being treated as errors
 Compilation failed
 fa8efb7
+Sun Apr 10 21:24:07 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  6|4
+total_score: 30/70
+af0dd1a
