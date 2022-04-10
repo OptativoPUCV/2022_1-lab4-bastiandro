@@ -1976,3 +1976,14 @@ Sun Apr 10 22:27:53 UTC 2022:
  tests:  6|4
 total_score: 30/70
 b634c4c
+Sun Apr 10 22:28:35 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:86:8: error: unused variable ‘i’ [-Werror=unused-variable]
+   Pair*i=map->buckets[aux];
+        ^
+cc1: all warnings being treated as errors
+Compilation failed
+e7fc827
