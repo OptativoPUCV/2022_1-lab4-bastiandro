@@ -1300,3 +1300,42 @@ hashmap.c:94:19: error: incompatible types when assigning to type ‘long int’
                    ^
 Compilation failed
 bb41585
+Sun Apr 10 19:18:29 UTC 2022: 
+ hashmap.c | 24 +++++++++++++++++++++++-
+ 1 file changed, 23 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:82:22: error: comparison between pointer and integer [-Werror]
+   while(map->current != NULL){
+                      ^~
+hashmap.c:83:29: error: invalid type argument of ‘->’ (have ‘long int’)
+     if(is_equal(map->current->key,key)==1){
+                             ^~
+hashmap.c:84:10: error: ‘current’ undeclared (first use in this function)
+       if(current==map->size){
+          ^~~~~~~
+hashmap.c:84:10: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:86:9: error: implicit declaration of function ‘removeNode’; did you mean ‘remove’? [-Werror=implicit-function-declaration]
+         removeNode(current;)
+         ^~~~~~~~~~
+         remove
+hashmap.c:86:27: error: expected ‘)’ before ‘;’ token
+         removeNode(current;)
+                           ^
+hashmap.c:87:9: error: expected ‘;’ before ‘map’
+         map->size--;
+         ^~~
+hashmap.c:92:9: error: ‘last’ undeclared (first use in this function); did you mean ‘hash’?
+         last->next=current->next;
+         ^~~~
+         hash
+hashmap.c:81:8: error: unused variable ‘index’ [-Werror=unused-variable]
+   long index=hash(key,map->capacity);
+        ^~~~~
+hashmap.c: In function ‘searchMap’:
+hashmap.c:116:19: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+       map->current=uno;
+                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+3563533
