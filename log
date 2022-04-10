@@ -1699,3 +1699,29 @@ hashmap.c:91:19: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 890913d
+Sun Apr 10 20:56:44 UTC 2022: 
+ hashmap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:83:19: error: ‘i’ undeclared (first use in this function)
+   if(map->buckets[i]!=NULL){
+                   ^
+hashmap.c:83:19: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:84:10: error: ‘HashMap {aka struct HashMap}’ has no member named ‘bucktes’; did you mean ‘buckets’?
+     map->bucktes[i]
+          ^~~~~~~
+          buckets
+hashmap.c:85:3: error: expected ‘;’ before ‘}’ token
+   }
+   ^
+hashmap.c:81:7: error: variable ‘posi’ set but not used [-Werror=unused-but-set-variable]
+   int posi;
+       ^~~~
+hashmap.c: In function ‘searchMap’:
+hashmap.c:96:19: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+       map->current=i;
+                   ^
+cc1: all warnings being treated as errors
+Compilation failed
+cf4f376

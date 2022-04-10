@@ -77,7 +77,12 @@ HashMap * createMap(long capacity) {
     return Mapa;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
+void eraseMap(HashMap * map,  char * key) {  
+  int posi;
+  posi=hash(key,map->capacity);
+  if(map->buckets[i]!=NULL){
+    map->bucktes[i]
+  }
 
 }
 
@@ -95,7 +100,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     }
     i = i +1;
     
-    return i;
+    return NULL;
   }
 
 Pair * firstMap(HashMap * map) {
