@@ -87,10 +87,11 @@ Pair * searchMap(HashMap * map,  char * key) {
   
   while(i != NULL || (is_equal(i->key,key)==1) ){
       return  (i->value);
-    if (i== NULL || i->key==NULL){
-    return NULL;
-    }
+    
       map->current=i;
+    }
+  if (i== NULL || i->key==NULL){
+    return NULL;
     }
     i = i +1;
     
