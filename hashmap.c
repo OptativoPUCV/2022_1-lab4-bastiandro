@@ -93,9 +93,8 @@ Pair * searchMap(HashMap * map,  char * key) {
     else{
       if (i== NULL || i->key==NULL){
     return NULL;
-    }
+    }}
       aux=aux+1;
-    }
     return NULL
   }
   }

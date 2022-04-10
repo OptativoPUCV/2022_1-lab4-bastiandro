@@ -1912,3 +1912,17 @@ hashmap.c:101:3: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 b125115
+Sun Apr 10 22:04:08 UTC 2022: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:99:3: error: expected ‘;’ before ‘}’ token
+   }
+   ^
+hashmap.c:100:3: error: control reaches end of non-void function [-Werror=return-type]
+   }
+   ^
+cc1: all warnings being treated as errors
+Compilation failed
+16c3d18
