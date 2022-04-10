@@ -92,10 +92,10 @@ Pair * searchMap(HashMap * map,  char * key) {
       return uno->value; 
     }
     uno = uno +1;
-  }
+  
     map->current=uno;
     return uno;
-}
+  }
 
 Pair * firstMap(HashMap * map) {
   int i=0;

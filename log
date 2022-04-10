@@ -1243,3 +1243,14 @@ hashmap.c:95:3: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 1e4a1f4
+Sun Apr 10 01:33:09 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:96:17: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+     map->current=uno;
+                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+5d01a3a
