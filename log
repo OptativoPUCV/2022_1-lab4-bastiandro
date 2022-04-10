@@ -1946,3 +1946,9 @@ hashmap.c:99:3: error: expected identifier or ‘(’ before ‘}’ token
    ^
 Compilation failed
 1c9d6b0
+Sun Apr 10 22:09:32 UTC 2022: 
+ hashmap.c | 19 +++++++++++--------
+ 1 file changed, 11 insertions(+), 8 deletions(-)
+ tests:  6|4
+total_score: 30/70
+bc83a3c
