@@ -78,6 +78,7 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) {    
+  
 
 
 }
@@ -89,10 +90,10 @@ Pair * searchMap(HashMap * map,  char * key) {
     return NULL;
   }
   while(uno != NULL || (is_equal(map->buckets[aux]->key,key)==1) ){
-      return uno->value; 
+      return  &(uno->value); 
+      map->current=uno;
     }
     uno = uno +1;
-    map->current=uno;
     
     return uno;
   }
