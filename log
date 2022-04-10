@@ -1201,3 +1201,14 @@ hashmap.c:94:5: error: ‘Map’ undeclared (first use in this function); did yo
 hashmap.c:94:5: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 55e46e7
+Sun Apr 10 00:00:40 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:17: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+     map->current=uno;
+                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+a8293c4
