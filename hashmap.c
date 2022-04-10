@@ -85,7 +85,7 @@ Pair * searchMap(HashMap * map,  char * key) {
   long aux=hash(key,map->capacity);
   Pair*i=map->buckets[aux];
   while(i != NULL || (is_equal(map->buckets[aux]->key,key)==1) ){
-      return  (i->value);
+      return  (aux->value);
     }
   if (i== NULL || i->key==NULL){
     return NULL;
