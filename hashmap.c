@@ -107,17 +107,17 @@ void eraseMap(HashMap * map,  char * key) {
 
 Pair * searchMap(HashMap * map,  char * key) { 
   long aux=hash(key,map->capacity);
-  Pair*uno=map->buckets[aux];
-  if (uno== NULL || uno->key==NULL){
+  Pair*i=map->buckets[aux];
+  if (i== NULL || i->key==NULL){
     return NULL;
   }
-  while(uno != NULL || (is_equal(map->buckets[aux]->key,key)==1) ){
-      return  (uno->value); 
-     
+  while(i != NULL || (is_equal(map->buckets[aux]->key,key)==1) ){
+      return  (i->value); 
+      map->current=i
     }
-    uno = uno +1;
+    i = i +1;
     
-    return uno;
+    return i;
   }
 
 Pair * firstMap(HashMap * map) {

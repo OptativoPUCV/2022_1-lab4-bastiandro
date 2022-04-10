@@ -1466,3 +1466,39 @@ hashmap.c:81:8: error: unused variable ‘index’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 b63b2c4
+Sun Apr 10 19:42:47 UTC 2022: 
+ hashmap.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:82:9: error: ‘current’ undeclared (first use in this function)
+   while(current != NULL){
+         ^~~~~~~
+hashmap.c:82:9: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:86:9: error: implicit declaration of function ‘removeNode’; did you mean ‘remove’? [-Werror=implicit-function-declaration]
+         removeNode(current;)
+         ^~~~~~~~~~
+         remove
+hashmap.c:86:27: error: expected ‘)’ before ‘;’ token
+         removeNode(current;)
+                           ^
+hashmap.c:87:9: error: expected ‘;’ before ‘map’
+         map->size--;
+         ^~~
+hashmap.c:92:9: error: ‘last’ undeclared (first use in this function); did you mean ‘hash’?
+         last->next=current->next;
+         ^~~~
+         hash
+hashmap.c:81:8: error: unused variable ‘index’ [-Werror=unused-variable]
+   long index=hash(key,map->capacity);
+        ^~~~~
+hashmap.c: In function ‘searchMap’:
+hashmap.c:116:19: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+       map->current=i
+                   ^
+hashmap.c:117:5: error: expected ‘;’ before ‘}’ token
+     }
+     ^
+cc1: all warnings being treated as errors
+Compilation failed
+4594d2a
