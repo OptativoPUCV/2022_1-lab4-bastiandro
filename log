@@ -1169,3 +1169,13 @@ hashmap.c:94:19: error: expected expression before ‘Pair’
                    ^~~~
 Compilation failed
 b4bc6e8
+Sun Apr 10 00:00:11 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:17: error: invalid type argument of ‘->’ (have ‘long int’)
+     map->current->key=uno;
+                 ^~
+Compilation failed
+df1457b
