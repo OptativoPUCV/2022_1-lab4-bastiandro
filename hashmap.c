@@ -83,8 +83,7 @@ long aux=hash(key,map->capacity);
    while(is_equal(key,map->buckets[aux]->key)==0||i==NULL) {
       aux=(aux +1) % map->capacity;
     }
-    
-    map->buckets[aux]=NULL;
+    map->buckets[aux]->key=NULL;
     
   }
 }
