@@ -2097,3 +2097,25 @@ hashmap.c:107:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 93e31cc
+Mon Apr 11 00:40:45 UTC 2022: 
+ hashmap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:83:21: error: ‘aux’ undeclared (first use in this function)
+    if (map->buckets[aux]== NULL || i->key==NULL){
+                     ^~~
+hashmap.c:83:21: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:84:12: error: ‘return’ with a value, in function returning void [-Werror]
+     return NULL;
+            ^~~~
+hashmap.c:80:6: note: declared here
+ void eraseMap(HashMap * map,  char * key) {
+      ^~~~~~~~
+hashmap.c: In function ‘firstMap’:
+hashmap.c:110:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+5d66b5b
