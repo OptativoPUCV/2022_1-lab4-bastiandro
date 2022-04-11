@@ -2167,3 +2167,18 @@ hashmap.c:105:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 22e1cf3
+Mon Apr 11 00:42:54 UTC 2022: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:105:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+test.c: In function ‘nextMap’:
+hashmap.c:110:7: error: ‘i’ is used uninitialized in this function [-Werror=uninitialized]
+   i=(i+1)%map->current==map->capacity;{
+     ~~^~~
+cc1: all warnings being treated as errors
+Compilation failed
+88bd04b
