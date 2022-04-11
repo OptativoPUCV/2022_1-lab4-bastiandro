@@ -79,8 +79,8 @@ HashMap * createMap(long capacity) {
 
 void eraseMap(HashMap * map,  char * key) {  
 long aux=hash(key,map->capacity);
-  Pair*=map->buckets[aux];
-   while(is_equal(key,map->buckets[aux]->key)==0||map->buckets[aux]==NULL) {
+  Pair*i=map->buckets[aux];
+   while(is_equal(key,map->buckets[aux]->key)==0||i==NULL) {
       aux=(aux +1) % map->capacity;
     }
     
