@@ -2226,3 +2226,21 @@ hashmap.c:105:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 7da9090
+Mon Apr 11 00:49:05 UTC 2022: 
+ hashmap.c | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:82:3: error: expected ‘,’ or ‘;’ before ‘aux’
+   aux->key=NULL;
+   ^~~
+hashmap.c:81:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+   Pair* aux=searchMap(map,key)
+         ^~~
+hashmap.c: In function ‘firstMap’:
+hashmap.c:103:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+233b935
