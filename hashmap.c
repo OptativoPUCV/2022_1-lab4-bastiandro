@@ -106,7 +106,10 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
   int i;
- 
+  i=map->current;
+  if(i==0){
+    return NULL;
+  }
   i=(i+1)%map->current==map->capacity;{
     return NULL;
   }
