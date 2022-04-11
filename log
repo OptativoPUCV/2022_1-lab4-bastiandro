@@ -2244,3 +2244,27 @@ hashmap.c:103:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 233b935
+Mon Apr 11 00:49:26 UTC 2022: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:82:9: error: conflicting types for ‘aux’
+   Pair* aux=searchMap(map,key)
+         ^~~
+hashmap.c:81:8: note: previous definition of ‘aux’ was here
+   long aux=hash(key,map->capacity);
+        ^~~
+hashmap.c:83:3: error: expected ‘,’ or ‘;’ before ‘aux’
+   aux->key=NULL;
+   ^~~
+hashmap.c:82:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+   Pair* aux=searchMap(map,key)
+         ^~~
+hashmap.c: In function ‘firstMap’:
+hashmap.c:104:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+eb1d682
