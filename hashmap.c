@@ -86,7 +86,6 @@ long aux=hash(key,map->capacity);
     map->buckets[aux]->key=NULL;
     
   }
-}
 
 Pair * searchMap(HashMap * map,  char * key) { 
   long aux=hash(key,map->capacity);
