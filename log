@@ -2286,3 +2286,28 @@ hashmap.c:104:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 40cc416
+Mon Apr 11 00:49:55 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:82:9: error: conflicting types for ‘pos’
+   Pair* pos=searchMap(map,key);
+         ^~~
+hashmap.c:81:8: note: previous definition of ‘pos’ was here
+   long pos=hash(key,map->capacity);
+        ^~~
+hashmap.c:83:3: error: ‘aux’ undeclared (first use in this function)
+   aux->key=NULL;
+   ^~~
+hashmap.c:83:3: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:82:9: error: unused variable ‘pos’ [-Werror=unused-variable]
+   Pair* pos=searchMap(map,key);
+         ^~~
+hashmap.c: In function ‘firstMap’:
+hashmap.c:104:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+f930ab0

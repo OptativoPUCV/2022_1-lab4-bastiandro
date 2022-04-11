@@ -78,8 +78,8 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) {  
-  long aux=hash(key,map->capacity);
-  Pair* aux=searchMap(map,key);
+  long pos=hash(key,map->capacity);
+  Pair* pos=searchMap(map,key);
   aux->key=NULL;
 
 }
